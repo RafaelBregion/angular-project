@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 :host {
   --text-primary: #000000;
-  --text-secundary: #15ff8e;
-  --text-three: #8db7ef;
+  --text-secundary: #00dbb2;
+  --text-third: #8db7ef;
   --bg-primary: #ffffff;
   --bg-secundary: #f2f4f5;
-  font-family: 'Baloo Tamma 2', cursive;
+  --font-family: 'Comfortaa', cursive;
+  --font-title: 'Patua One', cursive;
   margin: 0;
   padding: 0;
 }
 
+.modal {
+  font-family: var(--font-title);
+}
+
 body {
   background-color: var(--bg-secundary);
+  font-family: var(--font-family);
   color: black;
-  height: 100%;
 }
 
 p {
@@ -76,7 +80,6 @@ p {
 
 .brand {
   color: black;
-  font-family: 'Comfortaa', cursive;
   font-weight: 600;
 }
 
@@ -84,16 +87,15 @@ p {
   color: black !important;
   padding: 0;
   margin: 0;
-  font-family: 'Patua One', cursive;
+  font-family: var(--font-title);
 }
 
 .greenTitle {
   color: var(--text-secundary) !important;
-  font-family: 'Patua One', cursive;
+  font-family: var(--font-title);
 }
 
 .btn-c {
-  font-family: 'Comfortaa', cursive;
   background-color: var(--text-secundary) !important;
   border: 0 !important;
   color: white;
@@ -104,7 +106,7 @@ p {
 }
 
 .ih {
-  color: var(--text-three) !important;
+  color: var(--text-third) !important;
 }
 
 .foto-c {
@@ -112,7 +114,7 @@ p {
 }
 
 fa-icon {
-  color: var(--text-three);
+  color: var(--text-third);
 }
 
 /* Navbar */
@@ -178,11 +180,6 @@ footer {
   margin: 0.1rem !important;
 }
 
-.form-group {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .footer-bottom {
   width: 100%;
   bottom: 0rem;
@@ -193,45 +190,24 @@ footer {
 
 .btn-enviar {
   white-space: normal;
-  background-color: var(--text-three) !important;
-  color: white;
-}
-
-.btn-cad {
-  white-space: normal;
-  background-color: var(--text-three) !important;
+  background-color: var(--text-third) !important;
   color: white;
 }
 
 .btn-outline {
-  outline: 1px solid var(--text-three);
+  outline: 1px solid var(--text-third);
   border-radius: 10.5px !important;
 }
 
 .btn-outline:hover {
-  background-color: var(--text-three) !important;
+  background-color: var(--text-third) !important;
   color: white;
   outline: 0;
-}
-
-.btn-cad:hover {
-  background-color: rgb(38, 117, 219) !important;
-  color: white;
 }
 
 .img-center {
   text-align-last: center;
 }
-
-/* BTT */
-
-/* .back-to-top {
- position: fixed;
- display: none;
- bottom: 1rem;
- right: 3rem;
- background: var(--text-secundary) !important;
-} */
 
 /* Novos Espaçamento */
 
