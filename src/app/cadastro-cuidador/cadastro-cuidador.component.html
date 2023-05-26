@@ -13,12 +13,11 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" routerLink="cadastro-cuidador" [class.active]="tab == 'cadastro-cuidador'"
-            (click)="tab = 'cadastro-cuidador'">Cadastro de
-            Cuidador</a>
+            (click)="tab = 'cadastro-cuidador'">Caregiver Registration</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="cadastro-idoso" [class.active]="tab == 'cadastro-idoso'"
-            (click)="tab = 'cadastro-idoso'">Cadastro de Idoso</a>
+            (click)="tab = 'cadastro-idoso'">Elderly Registration</a>
         </li>
 
       </ul>
@@ -28,10 +27,10 @@
 
   <form class="container top-padding4" [ngSwitch]="tab">
     <h1 *ngSwitchCase="'cadastro-cuidador'" class="text-center">
-      {{cuidador}}</h1>
-    <h1 *ngSwitchCase="'cadastro-idoso'" class="text-center">{{idoso}}</h1>
+      {{caregiver}}</h1>
+    <h1 *ngSwitchCase="'cadastro-idoso'" class="text-center">{{elderly}}</h1>
     <div class="end me-5">
-      <p>Campo Obrigatório <label class="red">*</label>
+      <p>Required Field <label class="red">*</label>
     </div>
 
 
@@ -41,38 +40,38 @@
     <div class="container">
       <div class="row my-3">
         <div class="col-4">
-          <label class="spacing f" for="Nome">Nome Completo</label> <label class="red">*</label>
+          <label class="spacing f" for="Nome">Full Name</label> <label class="red">*</label>
           <input id="Nome" name="Nome" class="form-control input-md" required="" type="text">
         </div>
 
         <div class="col-2">
-          <label class="spacing f" for="CPF">CPF</label><label class="red">*</label>
-          <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text"
+          <label class="spacing f" for="CPF">Social Security Number</label><label class="red">*</label>
+          <input id="cpf" name="cpf" placeholder="Only numbers" class="form-control input-md" required="" type="text"
             maxlength="11" pattern="[0-9]+$">
         </div>
 
         <div class="col-2">
-          <label class="spacing f" for="telefone">Telefone</label><label class="red">*</label>
+          <label class="spacing f" for="telefone">Phone Number</label><label class="red">*</label>
           <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
           <input id="telefone" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text"
             maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
         </div>
 
         <div class="col-2">
-          <label class="spacing f" for="Nascimento">Nascimento</label><label class="red">*</label>
-          <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+          <label class="spacing f" for="Nascimento">Birth</label><label class="red">*</label>
+          <input id="dtnasc" name="dtnasc" placeholder="MM/dd/yyyy" class="form-control input-md" required=""
             type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
         </div>
 
         <div class="col-2">
-          <label class="spacing f" for="Gênero">Gênero</label><label class="red">*</label>
+          <label class="spacing f" for="Gênero">Gender</label><label class="red">*</label>
           <select class="form-select" required="" required>
             <option selected></option>
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-            <option value="Não Binário">Não Binário</option>
-            <option value="Outros">Outros</option>
-            <option value="Não Informar">Não Informar</option>
+            <option value="Masculino">Male</option>
+            <option value="Feminino">Female</option>
+            <option value="Não Binário">Non Binary</option>
+            <option value="Outros">Other</option>
+            <option value="Não Informar">Do Not Inform</option>
           </select>
         </div>
       </div>
@@ -88,13 +87,13 @@
         </div>
 
         <div class="col-3">
-          <label class="spacing f" for="Password">Senha</label><label class="red">*</label>
+          <label class="spacing f" for="Password">Password</label><label class="red">*</label>
           <input type="password" name="password" id="password" class="form-control" placeholder="*****"
             onkeyup='check();' required />
         </div>
 
         <div class="col-3">
-          <label class="spacing f" for="ConfirmPassword">Confirme a Senha</label><label class="red">*</label>
+          <label class="spacing f" for="ConfirmPassword">Confirm Your Password</label><label class="red">*</label>
           <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="*****"
             onkeyup='check();' required />
           <b><span id='mensagem'></span></b>
@@ -105,27 +104,27 @@
 
       <div class="row my-3">
         <div class="col-2">
-          <label class="spacing f" for="CEP">CEP</label><label class="red">*</label>
-          <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value=""
+          <label class="spacing f" for="CEP">Zip Code/Postal Code</label><label class="red">*</label>
+          <input id="cep" name="cep" placeholder="Only numbers" class="form-control input-md" required="" value=""
             type="search" maxlength="9" pattern="[0-9]+$">
         </div>
 
         <div class="col-2 align-self-end">
-          <button type="button" class="btn btn-primary">Pesquisar</button>
+          <button type="button" class="btn btn-primary">Search</button>
         </div>
 
         <div class="col-3">
-          <label class="spacing f" for="Rua">Rua</label><label class="red">*</label>
+          <label class="spacing f" for="Rua">Street</label><label class="red">*</label>
           <input id="rua" name="rua" class="form-control" required="" type="text">
         </div>
 
         <div class="col-2">
-          <label class="spacing f" for="Numero">Nº</label><label class="red">*</label>
+          <label class="spacing f" for="Numero">Street Number</label><label class="red">*</label>
           <input id="numero" name="numero" class="form-control" required="" type="text">
         </div>
 
         <div class="col-3">
-          <label class="spacing f" for="Bairro">Bairro</label>
+          <label class="spacing f" for="Bairro">District</label>
           <input id="bairro" name="bairro" class="form-control" required="" type="text">
         </div>
       </div>
@@ -134,17 +133,17 @@
 
       <div class="row my-3">
         <div class="col-4">
-          <label class="spacing f">Cidade</label><label class="red">*</label>
+          <label class="spacing f">City</label><label class="red">*</label>
           <input id="cidade" name="cidade" class="form-control" required="" type="text">
         </div>
 
         <div class="col-3">
-          <label class="spacing f">Estado</label><label class="red">*</label>
+          <label class="spacing f">State</label><label class="red">*</label>
           <input id="estado" name="estado" class="form-control" required="" type="text">
         </div>
 
         <div class="col-5">
-          <label class="spacing f">Como ficou sabendo sobre o Sr.Cuidado?</label>
+          <label class="spacing f">How did you find out about the Sr.Cuidado?</label>
           <input id="ficousabendo" name="ficousabendo" class="form-control" type="text">
         </div>
       </div>
@@ -153,17 +152,17 @@
 
       <div *ngSwitchCase="'cadastro-idoso'" class="row mb-2">
         <div class="col-12">
-          <label class="spacing f" for="deficiencia">Possui alguma deficiencia?<label class="red">*</label></label>
+          <label class="spacing f" for="deficiencia">Do you have any disabilities?<label class="red">*</label></label>
           <div class="col-12 mb-2">
             <label class="radio-inline mx-2" for="radios-0">
               <input type="radio" name="deficiencia" id="deficiencia" value="sim" onclick="habilita('descrevaD')"
-                required> Sim </label>
+                required> Yes </label>
             <label class="radio-inline" for="radios-1">
               <input type="radio" name="deficiencia" id="deficiencia" value="nao" onclick="desabilita('descrevaD')">
-              Não </label>
+              No </label>
           </div>
           <div class="col-12">
-            <input id="descrevaD" name="descrevaD" class="form-control" type="text" placeholder="Descreva"
+            <input id="descrevaD" name="descrevaD" class="form-control" type="text" placeholder="Describe"
               pattern="[0-9]+$">
           </div>
         </div>
@@ -174,20 +173,20 @@
 
 
       <div *ngSwitchCase="'cadastro-idoso'">
-        <div class=" mt-3">
-          <h4>Responsável</h4>
+        <div class=" mt-4">
+          <h4>Legal Responsible</h4>
         </div>
 
         <div class="row mb-3">
           <div class="col-4">
-            <label class="spacing f" for="Nome">Nome Completo</label> <label class="red">*</label>
+            <label class="spacing f" for="Nome">Full Name</label> <label class="red">*</label>
             <input id="Nome" name="Nome" class="form-control input-md" required="" type="text">
           </div>
 
 
 
           <div class="col-2">
-            <label class="spacing f" for="telefone">Telefone</label><label class="red">*</label>
+            <label class="spacing f" for="telefone">Telephone</label><label class="red">*</label>
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
             <input id="telefone" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" required=""
               type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
@@ -195,31 +194,32 @@
           </div>
 
           <div class="col-2">
-            <label class="spacing f" for="Nascimento">Nascimento</label><label class="red">*</label>
-            <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+            <label class="spacing f" for="Nascimento">Birth</label><label class="red">*</label>
+            <input id="dtnasc" name="dtnasc" placeholder="mm/dd/yyyy" class="form-control input-md" required=""
               type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
           </div>
 
           <div class="col-2">
-            <label class="spacing f" for="Estado Civil">Estado Civil</label>
+            <label class="spacing f" for="Estado Civil">Marital Status</label>
             <select class="form-select">
               <option selected></option>
-              <option value="Solteiro(a)">Solteiro(a)</option>
-              <option value="Casado(a)">Casado(a)</option>
-              <option value="Divorciado(a)">Divorciado(a)</option>
-              <option value="Viuvo(a)">Viuvo(a)</option>
+              <option value="Solteiro(a)">Single</option>
+              <option value="Noivo(a)">Engaged</option>
+              <option value="Casado(a)">Married</option>
+              <option value="Divorciado(a)">Divorced</option>
+              <option value="Viuvo(a)">Widowed</option>
             </select>
           </div>
 
           <div class="col-2">
-            <label class="spacing f" for="Gênero">Gênero</label>
+            <label class="spacing f" for="Gênero">Gender</label>
             <select class="form-select">
               <option selected></option>
-              <option value="Masculino">Masculino</option>
-              <option value="Feminino">Feminino</option>
-              <option value="Não Binário">Não Binário</option>
-              <option value="Outros">Outros</option>
-              <option value="Não Informar">Não Informar</option>
+              <option value="Masculino">Male</option>
+              <option value="Feminino">Female</option>
+              <option value="Não Binário">Non Binary</option>
+              <option value="Outros">Other</option>
+              <option value="Não Informar">Do not Inform</option>
             </select>
           </div>
         </div>
@@ -234,13 +234,14 @@
           </div>
 
           <div class="col-3">
-            <label class="spacing f" for="Vinculo">Vínculo com o Cliente</label><label class="red">*</label>
-            <input id="vinculo" name="vinculo" placeholder="Relação" class="form-control" required="" type="text">
+            <label class="spacing f" for="Vinculo">Bond with the elderly</label><label class="red">*</label>
+            <input id="vinculo" name="vinculo" placeholder="Bond" class="form-control" required="" type="text">
           </div>
 
           <div class="col-3">
-            <label class="spacing f" for="Profissão">Profissão</label><label class="red">*</label>
-            <input id="profissao" name="profissao" placeholder="Profissão" class="form-control" required="" type="text">
+            <label class="spacing f" for="Profissão">Occupation</label><label class="red">*</label>
+            <input id="profissao" name="profissao" placeholder="Occupation" class="form-control" required=""
+              type="text">
           </div>
 
 
@@ -252,10 +253,10 @@
 
       <div class="row mt-4">
         <div class="col-1 bottom-margin">
-          <button id="Limpar" name="Limpar" class="btn btn-secondary" type="Reset">Limpar</button>
+          <button id="Limpar" name="Limpar" class="btn btn-secondary" type="Reset">Clear</button>
         </div>
         <div class="col">
-          <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+          <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Register</button>
         </div>
       </div>
     </div>

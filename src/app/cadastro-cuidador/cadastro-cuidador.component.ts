@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core'
 export class CadastroCuidadorComponent implements OnInit {
   tab: string = 'cadastro-cuidador'
 
-  cuidador = 'Cadastro do Cuidador'
-  idoso = 'Cadastro do Idoso'
+  caregiver = 'Caregiver Registration'
+  elderly = 'Elderly Registration'
 
   constructor() {}
 
