@@ -25,39 +25,21 @@ body {
   color: black;
   font-weight: 600;
 }
-
-.title {
-  font-family: var(--font-title) !important;
-}
-
-.borda {
-  border: 1px solid gray !important;
-  margin: 1rem !important;
-  border-radius: 15px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-
 .end {
   text-align: end;
 }
 
 .spacing {
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.f {
+.font-title {
   font-family: var(--font-title);
 }
 
 .red {
   color: red !important;
-}
-
-.btn-three {
-  border-color: #ced4da !important;
-  background-color: #ffffff !important;
 }
 
 /* Navbar */
@@ -109,18 +91,10 @@ body {
   padding-top: 4.5rem;
 }
 
-.top-padding6 {
-  padding-top: 6rem;
+/* Celular */
+
+@media only screen and (max-width: 576px) {
 }
 
-.top-padding8 {
-  padding-top: 8rem;
-}
-
-.top-padding10 {
-  padding-top: 10rem;
-}
-
-.bottom-margin {
-  margin-bottom: 2rem;
+@media only screen and (max-width: 992px) {
 }
