@@ -13,7 +13,7 @@ import {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  title = 'Senhor Cuidado - Cuidadores de Idosos'
+  title = 'Senhor Cuidado - Elderly Caregivers'
   faRocket = faRocket
   faEye = faEye
   faBalaceScale = faBalanceScale

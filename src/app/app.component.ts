@@ -8,5 +8,5 @@ import {} from '@fortawesome/angular-fontawesome'
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Senhor Cuidado - Elderly Caregiver'
+  title = 'Senhor Cuidado - Elderly Caregivers'
 }
